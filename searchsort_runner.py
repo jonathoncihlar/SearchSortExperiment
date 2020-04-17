@@ -64,13 +64,15 @@ list = searchsort.buildList("""+listSize+""", True)
 
 code = {
   "linear" : 
-   {"description" : "linear search",
+   {
+    "description" : "linear search",
     "setup" : setup,
     "test" : "searchsort.linearSearch(list, 0)"
    },
   
   "binary" : 
-   {"description" : "binary search",
+   {
+    "description" : "binary search",
     "setup" : setup,
     "test" : "searchsort.binarySearch(list, 0)"
    },
@@ -82,13 +84,15 @@ code = {
    },
   
   "bubble" : 
-   {"description" : "bubble sort",
+   {
+    "description" : "bubble sort",
     "setup" : setupReversed,
     "test" : "searchsort.bubbleSort(list)"
    },
   
    "insert" : 
-   {"description" : "insertion sort",
+   {
+    "description" : "insertion sort",
     "setup" : setupReversed,
     "test" : "searchsort.bubbleSort(list)"
    }
@@ -96,7 +100,7 @@ code = {
 
 print("Running "+ code[algorithm]["description"] + "on a list of "+\
       listSize + " elements " + str(reps) + " times.")
-  # run the code and 
+  # run the code and time it
 times = timeit.repeat(
   setup = code[algorithm]["setup"], 
   stmt = code[algorithm]["test"], 
@@ -105,4 +109,4 @@ times = timeit.repeat(
 
 print("--Time in ms--")
 for i in range(0, len(times)):
-  print(str(round(times[i]*1000, 5)))
+  print(str(round(times[i]*1000, 5))) # convert to ms and round to five places
