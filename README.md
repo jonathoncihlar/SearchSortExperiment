@@ -8,9 +8,11 @@ time.
 
 `algorithm` One of `linear binary` searches or  `bubble merge insert` sorts
 
-`listSize` An integer from 10 to 1,000,000,000 representing the size of the listSize
+`listSize` An integer from 10 to 1,000,000,000 representing the size of the
+listSize
 
-Example: `python searchsort.py binary 10000` performs a binary search on a list of 10,000 elements.
+Example: `python searchsort.py binary 10000` performs a binary search on a 
+list of 10,000 elements.
 
 The application will print out the number of seconds it took the algorithm to 
 run on the given list size.
