@@ -5,7 +5,25 @@ algorithms so that students can empirically find the growth of the
 worst case running time of each. There are no classes associated - this
 file is just a collection of functions.
 """
+
+
+def buildList(listSize, reverse=False):
+  """Constructs a list of integers per the reverse flag. The integers 
+    range from 1 to listSize (or vice versa).
     
+    Parameters
+    ----------
+    listSize : int
+      The size of the list to create, restricted between 10 and 100,000,000
+    reverse : boolean, optional
+      Whether to create the list in reverse order (default is False).
+    """
+    
+    # create the list
+  if (reverse):
+    return [x for x in range(abs(listSize), 0, -1)] 
+  else: 
+    return [x for x in range(1, abs(listSize)+1)]    
 def linearSearch(list, target):
   """Conducts a linear search looking for an item in a slist.
     
@@ -67,24 +85,9 @@ def binarySearch(list, target):
   return None
     
 
+  
+  
 
-def buildList(listSize, reverse=False):
-  """Constructs a list of integers per the reverse flag. The integers 
-    range from 1 to listSize (or vice versa).
-    
-    Parameters
-    ----------
-    listSize : int
-      The size of the list to create, restricted between 10 and 100,000,000
-    reverse : boolean, optional
-      Whether to create the list in reverse order (default is False).
-    """
-    
-    # create the list
-  if (reverse):
-    return [x for x in range(abs(listSize), 0, -1)] 
-  else: 
-    return [x for x in range(1, abs(listSize)+1)]
 
   
   
