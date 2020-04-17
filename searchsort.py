@@ -63,11 +63,9 @@ def binarySearch(list, target):
     else:
       high = index
     
-    
     # if we get this far, we didn't find the target so return -1 
   return None
     
-  return index
 
 
 def buildList(listSize, reverse=False):
