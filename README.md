@@ -16,5 +16,5 @@ list.
 Example: `python searchsort_runner.py binary 10000 10` performs a binary search on a 
 list of 10,000 elements 10 times.
 
-The application will print out the number of seconds it took the algorithm to 
+The application will print out the number of milliseconds it took the algorithm to 
 run on the given list size.
