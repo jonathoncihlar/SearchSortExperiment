@@ -98,7 +98,7 @@ code = {
    }
 }
 
-print("Running "+ code[algorithm]["description"] + "on a list of "+\
+print("Running "+ code[algorithm]["description"] + " on a list of "+\
       listSize + " elements " + str(reps) + " times.")
   # run the code and time it
 times = timeit.repeat(
