@@ -84,8 +84,30 @@ def binarySearch(list, target):
     # if we get this far, we didn't find the target so return -1 
   return None
     
-
-  
+def bubbleSort(list):
+  """Conducts a bubble sort.
+    
+    Parameters
+    ----------
+    list : int[]
+      A list of integers to sort.
+    
+    Returns
+    -------
+    list : int[]
+      The sorted list
+    """
+  swapped = True # set the swapped flag to true in order to get one pass
+    # repeat sorting until no swaps happen on an iteration 
+  while (swapped):
+    swapped = False # set the flag to false before another iteration
+    for i in range (0, len(list)-1):
+         # if the elements are out of order, then swap them
+      if (list[i] > list[i+1]):
+        list[i], list[i+1] = list[i+1], list[i]
+        swapped = True # set the flag to true to fire another iteration
+        
+  return list # return the list when the loop finishes
   
 
 
