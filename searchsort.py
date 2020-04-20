@@ -109,8 +109,20 @@ def bubbleSort(list):
         
   return list # return the list when the loop finishes
   
-
-
+def mergeSort(list)
+  """Conducts a merge sort.
+    
+    Parameters
+    ----------
+    list : int[]
+      A list of integers to sort.
+    
+    Returns
+    -------
+    list : int[]
+      The sorted list
+    """
+  pass
   
   
     
