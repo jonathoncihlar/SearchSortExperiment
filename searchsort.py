@@ -171,6 +171,30 @@ def mergeSort(list):
     mIndex += 1
   
   return merged
+
+def insertionSort(list):
+  """Conducts an insertion sort.
     
-        
+    Parameters
+    ----------
+    list : int[]
+      A list of integers to sort.
     
+    Returns
+    -------
+    list : int[]
+      The sorted list
+  """
+    # run through list entire list
+    # starting at 2nd element, index 1
+  for i in range(1, len(list)):
+    j = i
+      # run backward from current element swapping
+      # elements that are out of order 
+      # stop when the beginning of list is hit or
+      # elements are in orders
+    while (j > 0 and list[j-1] > list[j]):
+      list[j], list[j-1] = list[j-1], list[j] # swap
+      j -= 1
+  
+  return list
