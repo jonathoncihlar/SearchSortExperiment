@@ -23,11 +23,11 @@ if (len(sys.argv) != 4):
   sys.exit(1)
 
   # make sure the algorithm passed in is valid
-validAlgorithms = ["linear", "binary", "merge", "insertion", "bubble"]
+validAlgorithms = ["linear", "binary", "merge", "insertion", "bubble", "radix"]
 algorithm = sys.argv[1].lower() # translate the string to lower case
 if (algorithm not in validAlgorithms):
   print("Invalid algorithm '"+sys.argv[1]+"'.")
-  print("It must be one of linear, binary, merge, insertion, bubble")
+  print("It must be one of linear, binary, merge, insertion, bubble, radix")
   sys.exit(1)
  
  # make sure list size is in bounds
@@ -95,6 +95,13 @@ code = {
     "description" : "insertion sort",
     "setup" : setupReversed,
     "test" : "searchsort.insertionSort(list)"
+   },
+
+   "radix" : 
+   {
+    "description" : "radix sort",
+    "setup" : setupReversed,
+    "test" : "searchsort.radixSort(list)"
    }
 }
 

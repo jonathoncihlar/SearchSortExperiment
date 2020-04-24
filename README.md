@@ -6,7 +6,7 @@ time.
 
 `usage: python searchsort_runner.py <algorithm> <listSize> <reps>`
 
-`algorithm` One of `linear binary` searches or  `bubble merge insertion` sorts.
+`algorithm` One of `linear binary` searches or  `bubble merge insertion radix` sorts.
 
 `listSize` An integer from 10 to 10,000,000 representing the size of the
 list.
