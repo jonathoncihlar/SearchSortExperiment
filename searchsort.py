@@ -109,8 +109,8 @@ def bubbleSort(list):
         
   return list # return the list when the loop finishes
   
-def mergeSort(list)
-  """Conducts a merge sort.
+def mergeSort(list):
+  """Conducts a merge sort using recursion.
     
     Parameters
     ----------
@@ -122,9 +122,55 @@ def mergeSort(list)
     list : int[]
       The sorted list
     """
-  pass
+    # define base case to end recursion
+  if (len(list) <= 1):
+    return list
+
+    # split list into left and right
+  middle = int(len(list) / 2) # grab the middle
+  left = list[:middle] # slice
+  right = list[middle:] # slice
   
+    # recursively call the function
+  left = mergeSort(left)
+  right = mergeSort(right)
+
+    # if one of the lists is none, then 
+    # simply return the list that is valid
+  if left is None or right is None:
+    return left or right
+
+    # merge the left and right lists together
+    # figure out how many elementss to merge
+  merged =[None] * (len(left) + len(right))
+  lIndex = rIndex = mIndex = 0
+    # do the merge by examining the left and right arrays
+    # in order
+  while (lIndex < len(left) and rIndex < len(right)):
+      # if the item in the left side come first
+      # add it to the merged array
+    if (left[lIndex] < right[rIndex]):
+      merged[mIndex] = left[lIndex]
+      lIndex += 1 # move the left index
+      # otherwise use the right index
+    else:
+      merged[mIndex] = right[rIndex]
+      rIndex += 1
+    mIndex += 1
+
+    # pick up elements from unfinished arrays
+    # only one of these will trigger
+  while (lIndex < len(left)):
+    merged[mIndex] = left[lIndex]
+    lIndex += 1
+    mIndex += 1
+
+  while (rIndex < len(right)):
+    merged[mIndex] = right[rIndex]
+    rIndex += 1
+    mIndex += 1
   
+  return merged
     
-    
+        
     
