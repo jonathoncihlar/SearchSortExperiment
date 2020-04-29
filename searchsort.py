@@ -213,5 +213,23 @@ def radixSort(list):
     list : int[]
       The sorted list
   """  
-
+    # create 10 buckets for sorting
+  buckets = [[], [], [], [], [], [], [], [], [], []]
+    # figure out how many powers of 10/places to sort on
+  highestPower = len(str(max(list)))
+    # loop through each place (1s, 10s, 100s)
+  for n in range(0, highestPower):
+      # put each item into the appropriate bucket
+    for item in list:
+      index = (item // 10**n) % 10 # calculate the index
+      buckets[index].append(item) # add the item to the bucket
+    
+    list.clear()
+      # go through the buckets and put the items
+      # back into the main list
+    for b in buckets:
+      for item in b:
+        list.append(item)
+      b.clear()
+      
   return list
